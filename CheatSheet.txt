@@ -1,0 +1,16 @@
+truffle.cmd migrate --network ganache
+truffle.cmd migrate --compile-all --reset --network ganache
+
+
+truffle.cmd console --network ganache
+ 	Shop.address
+	web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]),"Wei").toNumber()
+	Shop.deployed().then(function(instance){app=instance;})
+
+
+truffle.cmd test --network ganache
+
+npm install
+truffle.cmd test --network ganache
+truffle.cmd migrate --network ganache
+npm run dev
