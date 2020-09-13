@@ -49,7 +49,7 @@ initContract: function() {
     // get the contract artifact file and use it to instantiate a truffle contract abstraction
     App.contracts.Shop = TruffleContract(shopArtifact);
     // set the provider for our contracts
-    App.contracts.Shop.setProvider(App.web3Provider);
+    App.contracts.Shop.setProvider(window.web3.currentProvider);
     // listen to events
     App.listenToEvents();
     // retrieve the item from the contract
